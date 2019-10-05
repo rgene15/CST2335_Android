@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Labs</string>
+    <string name="hello_message">Bonjour!</string>
+    <string name="ButtonText">Je suis un bouton</string>
+    <string name="GUItext">Regardez mon GUI</string>
+    <string name="switchText">Changer on/off</string>
+    <string name="Click">Cliquez ici</string>
+    <string name="check">Regarde ça!</string>
+    <string name="ThisisText">Type ici</string>
+    <string name="Tmail">Ilagay mo email mo</string>
+    <string name="Email">itype mo email mo</string>
+    <string name="Pass">Itype mo ang iyong pasword</string>
+    <string name="pas">Pasword</string>
+    <string name="L">Para Maka Pasok</string>
+    <string name="Pro">Ang Iyong Profile</string>
+    <string name="name">Ang iyong Pangalan</string>
+    <string name="ename">Itype mo ang iyong pangalan</string>
+    <string name="eemail">Itype mo email mo</string>
+    <string name="ymail">Ang Iyong Email:</string>
+    <string name="ypic">Ang iyong picture:</string>
+    <string name="imagep">Pindotin sa taas para maka kuha ng imahe</string>
+
+
+
+</resources>

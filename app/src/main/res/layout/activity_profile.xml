@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".ProfileActivity"
+    >
+
+    <TextView
+        android:id="@+id/Yourprof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Pro"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:layout_below="@id/Yourprof"
+
+        >
+    </TextView>
+
+    <EditText
+        android:id="@+id/ename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ename"
+        android:inputType="textPersonName"
+        android:layout_below="@id/Name"
+        />
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ymail"
+        android:layout_below="@id/ename">
+    </TextView>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" "
+        android:layout_below="@id/Email"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:id="@+id/pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ypic"
+        android:layout_below="@id/email">
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/imagePic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/picture_frame"
+        android:onClick="dispatchTakePictureIntent"
+        android:layout_below="@id/pic"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imagePic"
+        android:text="@string/imagep"
+        />
+
+
+</RelativeLayout>
+
+
+
+
+
