@@ -8,6 +8,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.util.Log;
@@ -17,6 +18,7 @@ public class ProfileActivity extends AppCompatActivity {
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private TextView userEmail;
+    Button but;
 
     SharedPreferences sharedPreferences;
     @Override
@@ -50,6 +52,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
@@ -77,6 +80,20 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onDestroy(){
         Log.e(ACTIVITY_NAME,"onDestroy()");
         super.onDestroy();
+    }
+    public void chat(View v){
+         but =(Button) findViewById(R.id.chat);
+        but.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+                startActivity(intent);
+            }
+
+
+        });
+
     }
 
 

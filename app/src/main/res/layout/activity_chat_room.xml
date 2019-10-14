@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListView
+        android:id="@+id/listitems"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:stackFromBottom="true"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btnsend"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Send"
+
+
+        />
+
+        <EditText
+            android:id="@+id/editChat"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"></EditText>
+
+
+        <Button
+            android:id="@+id/btnreceive"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/receive"
+
+            />
+
+    </LinearLayout>
+</LinearLayout>

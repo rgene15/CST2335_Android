@@ -20,7 +20,8 @@
     <string name="ymail">Ang Iyong Email:</string>
     <string name="ypic">Ang iyong picture:</string>
     <string name="imagep">Pindotin sa taas para maka kuha ng imahe</string>
-
+    <string name="receive">recevoir</string>
+    <string name="Send">Envoyer</string>
 
 
 </resources>

@@ -50,13 +50,13 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onPause(){
 
         sharedPreferences= getSharedPreferences("data", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
+    SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("data",mail.getText().toString());
         editor.commit();
         super.onPause();
 
 
-    }
+}
 
 
    public void login(View v){

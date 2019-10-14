@@ -67,11 +67,23 @@
         android:onClick="dispatchTakePictureIntent"
         android:layout_below="@id/pic"/>
     <TextView
+        android:id="@+id/ab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imagePic"
         android:text="@string/imagep"
         />
+    <Button
+        android:id="@+id/chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat"
+        android:layout_below="@+id/ab"
+        android:onClick="chat"
+        android:layout_centerHorizontal="true"
+        >
+
+    </Button>
 
 
 </RelativeLayout>

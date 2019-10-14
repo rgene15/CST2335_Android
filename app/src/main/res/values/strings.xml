@@ -20,6 +20,7 @@
     <string name="ymail">Your Email:</string>
     <string name="ypic">Your Picture:</string>
     <string name="imagep">Click above to take a picture</string>
-
+    <string name="receive">receive</string>
+    <string name="Send">send</string>
 
 </resources>
