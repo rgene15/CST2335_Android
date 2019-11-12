@@ -3,6 +3,7 @@ package com.example.androidlabs;
 import android.content.Context;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,18 +12,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.database.Cursor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ChatRoomActivity extends AppCompatActivity {
 
-    ListView listView;
-    EditText editText;
-    List<Message> sMessage = new ArrayList<>();
-    Button Send;
-    Button Receive;
-
+    private ListView listView;
+    private EditText editText;
+    private List<Message> sMessage = new ArrayList<>();
+    private Button Send;
+    private Button Receive;
+    private MyDBHandler helper;
+    private ChatAdapter messageAdapter;
+    private static final String ACTIVITY_NAME = "Chat Window Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +38,25 @@ public class ChatRoomActivity extends AppCompatActivity {
         Send = (Button)findViewById(R.id.btnsend);
         Receive = (Button)findViewById(R.id.btnreceive);
 
+        helper = new MyDBHandler(this);
+        Cursor cursor = helper.viewData();
+
+        while(cursor.moveToNext()){
+            String s = cursor.getString( cursor.getColumnIndex(helper.COL_MESSAGE));
+            Message allow = new Message(s, true);
+            sMessage.add( allow);
+            Log.i(ACTIVITY_NAME, "SQL MESSAGE: " + cursor.getString( cursor.getColumnIndex(helper.COL_MESSAGE) ) );
+        }
+
         Send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String newMsg = editText.getText().toString();
+                Message messaa = new Message(newMsg, true);
+                sMessage.add( messaa );
+                helper.insertData(newMsg);
+                messageAdapter.notifyDataSetChanged();
+                editText.setText("");
                 getMessage();
             }
         });

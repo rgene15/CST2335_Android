@@ -26,7 +26,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-       Bundle intent = getIntent().getExtras();
+        Bundle intent = getIntent().getExtras();
         String mailing=intent.getString("EMAIL");
         TextView editText=(TextView) findViewById(R.id.email);
         editText.setText(mailing);
@@ -82,7 +82,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onDestroy();
     }
     public void chat(View v){
-         but =(Button) findViewById(R.id.chat);
+        but =(Button) findViewById(R.id.chat);
         but.setOnClickListener(new View.OnClickListener() {
 
             @Override

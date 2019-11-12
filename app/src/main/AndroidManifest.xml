@@ -22,6 +22,7 @@
         <activity
             android:name=".ChatRoomActivity" >
         </activity>
+        <activity android:name=".MyDBHandler"></activity>
 
         <activity android:name=".MainActivity2">
             <intent-filter>

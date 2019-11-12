@@ -12,12 +12,12 @@ import android.widget.EditText;
 
 
 public class MainActivity2 extends AppCompatActivity {
-     EditText mail;
+    EditText mail;
 
-     public static final String D = "try";
+    public static final String D = "try";
 
-     SharedPreferences sharedPreferences;
-     private Button button;
+    SharedPreferences sharedPreferences;
+    private Button button;
 
 
 
@@ -26,7 +26,7 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-       mail=(EditText) findViewById(R.id.mail);
+        mail=(EditText) findViewById(R.id.mail);
 
 
 
@@ -50,31 +50,31 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onPause(){
 
         sharedPreferences= getSharedPreferences("data", Context.MODE_PRIVATE);
-    SharedPreferences.Editor editor = sharedPreferences.edit();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("data",mail.getText().toString());
         editor.commit();
         super.onPause();
 
 
-}
+    }
 
 
-   public void login(View v){
+    public void login(View v){
 
-       button =(Button) findViewById(R.id.Login);
-       button.setOnClickListener(new View.OnClickListener() {
+        button =(Button) findViewById(R.id.Login);
+        button.setOnClickListener(new View.OnClickListener() {
 
-           @Override
-           public void onClick(View view) {
-               Intent intent = new Intent(MainActivity2.this, ProfileActivity.class );
-               EditText mail=(EditText)findViewById(R.id.mail);
-               String emailReal=mail.getText().toString();
-               intent.putExtra("EMAIL", emailReal);
-               startActivity(intent);
-           }
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity2.this, ProfileActivity.class );
+                EditText mail=(EditText)findViewById(R.id.mail);
+                String emailReal=mail.getText().toString();
+                intent.putExtra("EMAIL", emailReal);
+                startActivity(intent);
+            }
 
 
-       });
+        });
     }
 
 
