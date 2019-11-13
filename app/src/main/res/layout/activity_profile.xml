@@ -85,6 +85,18 @@
 
     </Button>
 
+    <Button
+        android:id="@+id/Weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WeatherForecast"
+        android:layout_below="@+id/chat"
+        android:onClick="weather"
+        android:layout_centerHorizontal="true"
+        >
+
+    </Button>
+
 
 </RelativeLayout>
 

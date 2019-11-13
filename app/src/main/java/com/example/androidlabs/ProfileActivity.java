@@ -81,8 +81,8 @@ public class ProfileActivity extends AppCompatActivity {
         Log.e(ACTIVITY_NAME,"onDestroy()");
         super.onDestroy();
     }
-    public void chat(View v){
-        but =(Button) findViewById(R.id.chat);
+    public void chat(View v) {
+        but = (Button) findViewById(R.id.chat);
         but.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -93,16 +93,21 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         });
+    }
+        public void weather (View view){
+            Button weather = (Button) findViewById(R.id.Weather);
+            weather.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(ProfileActivity.this, WeatherForecast.class);
+                    startActivity(intent);
+                }
+
+
+            });
+
+        }
+
 
     }
-
-
-
-
-
-
-
-
-
-
-}
