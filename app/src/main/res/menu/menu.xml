@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/item1"
+
+        android:icon="@drawable/initial"
+        android:orderInCategory="50"
+        app:showAsAction="always"
+        android:title="edit" />
+
+
+    <item android:id="@+id/zombie"
+        android:orderInCategory="100"
+        android:icon="@drawable/zombie"
+        app:showAsAction="always|collapseActionView"
+        android:title="search" />
+
+    <item android:id="@+id/back"
+        android:orderInCategory="150"
+        android:icon="@drawable/back"
+        app:showAsAction="always|collapseActionView"
+        android:title="trash" />
+    <item
+        android:id="@+id/overFlow"
+        android:orderInCategory="200"
+        android:title="Option"
+        app:showAsAction="never"
+
+
+        />
+</menu>

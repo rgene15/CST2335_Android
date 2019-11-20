@@ -150,7 +150,7 @@ public class WeatherForecast extends AppCompatActivity {
                         image = BitmapFactory.decodeStream(connection.getInputStream());
                     }
                     // save outlookPic image to local storage
-                    Log.i("Downloading file", file);
+                    Log.i("file Download", file);
                     FileOutputStream outputStream = openFileOutput(file,
                             Context.MODE_PRIVATE);
                     image.compress(Bitmap.CompressFormat.PNG, 80, outputStream);
@@ -162,7 +162,8 @@ public class WeatherForecast extends AppCompatActivity {
 
             } catch(MalformedURLException mfe){ ret = "Malformed URL exception"; }
             catch(IOException ioe){ ret = "IO Exception. Is the Wifi connected?";}
-            catch(XmlPullParserException pe){ ret = "XML Pull exception. The XML is not properly formed" ;}catch (JSONException json) {
+            catch(XmlPullParserException pe){ ret = "XML Pull exception. The XML is not properly formed" ;}
+            catch (JSONException json) {
                 ret = "JSON file Have an error";
             }
             return ret;

@@ -106,8 +106,17 @@ public class ProfileActivity extends AppCompatActivity {
 
 
             });
-
         }
 
+        public void toolbar(View view){
+        Button toolbar = (Button) findViewById(R.id.testToolbar);
+        toolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, TestToolbar.class);
+                startActivity(intent);
+            }
+        });
 
+            }
     }

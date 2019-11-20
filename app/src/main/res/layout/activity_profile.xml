@@ -94,8 +94,16 @@
         android:onClick="weather"
         android:layout_centerHorizontal="true"
         >
-
     </Button>
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/testToolbar"
+    android:text="Go to Toolbar page"
+    android:layout_below="@id/Weather"
+    android:layout_centerHorizontal="true"
+    android:onClick="toolbar"
+    />
 
 
 </RelativeLayout>
